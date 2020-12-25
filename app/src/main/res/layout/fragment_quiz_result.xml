@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizResultFragment">
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/fragment_quiz_result_title_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/title_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_totalQuestions_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/fragment_quiz_result_totalQuestions_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_quiz_result_title_textView"
+        style="@style/field_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_totalAnswered_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/fragment_quiz_result_totalAnswered_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_quiz_result_totalQuestions_textView"
+        style="@style/field_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_totalCorrect_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/fragment_quiz_result_totalCorrect_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_quiz_result_totalAnswered_textView"
+        style="@style/field_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_totalWrong_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/fragment_quiz_result_totalWrong_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_quiz_result_totalCorrect_textView"
+        style="@style/field_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_percentage_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/fragment_quiz_result_percentage_textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_quiz_result_totalWrong_textView"
+        style="@style/field_textView"/>
+
+    <Button
+        android:id="@+id/fragment_quiz_result_continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/fragment_quiz_result_continue_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_totalQuestionsData_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fragment_quiz_result_totalQuestions_textView"
+        app:layout_constraintStart_toEndOf="@+id/fragment_quiz_result_totalQuestions_textView"
+        style="@style/fieldData_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_totalAnsweredData_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fragment_quiz_result_totalAnswered_textView"
+        app:layout_constraintStart_toEndOf="@+id/fragment_quiz_result_totalAnswered_textView"
+        style="@style/fieldData_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_totalCorrectData_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fragment_quiz_result_totalCorrect_textView"
+        app:layout_constraintStart_toEndOf="@+id/fragment_quiz_result_totalCorrect_textView"
+        style="@style/fieldData_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_totalWrongData_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fragment_quiz_result_totalWrong_textView"
+        app:layout_constraintStart_toEndOf="@+id/fragment_quiz_result_totalWrong_textView"
+        style="@style/fieldData_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_percentageData_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fragment_quiz_result_percentage_textView"
+        app:layout_constraintStart_toEndOf="@+id/fragment_quiz_result_percentage_textView"
+        style="@style/fieldData_textView"/>
+
+    <Button
+        android:id="@+id/fragment_quiz_result_retry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/fragment_quiz_result_retry_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/fragment_quiz_result_result_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/fragment_quiz_result_result_textView_passed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_quiz_result_percentage_textView"
+        style="@style/title_textView"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

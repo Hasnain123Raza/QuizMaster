@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainactivity_navigation_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.quizmaster.WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.quizmaster.profileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_viewQuizFragment"
+            app:destination="@id/viewQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.quizmaster.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/viewQuizFragment"
+        android:name="com.example.quizmaster.ViewQuizFragment"
+        android:label="fragment_view_quiz"
+        tools:layout="@layout/fragment_view_quiz" >
+        <action
+            android:id="@+id/action_viewQuizFragment_to_takeQuizFragment"
+            app:destination="@id/takeQuizFragment"
+            app:popUpTo="@id/viewQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/takeQuizFragment"
+        android:name="com.example.quizmaster.TakeQuizFragment"
+        android:label="fragment_take_quiz"
+        tools:layout="@layout/fragment_take_quiz" >
+        <action
+            android:id="@+id/action_takeQuizFragment_to_quizResultFragment"
+            app:destination="@id/quizResultFragment"
+            app:popUpTo="@id/viewQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizResultFragment"
+        android:name="com.example.quizmaster.QuizResultFragment"
+        android:label="fragment_quiz_result"
+        tools:layout="@layout/fragment_quiz_result" >
+        <action
+            android:id="@+id/action_quizResultFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_quizResultFragment_to_viewQuizFragment"
+            app:destination="@id/viewQuizFragment"
+            app:popUpTo="@id/viewQuizFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

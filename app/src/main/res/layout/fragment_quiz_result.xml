@@ -7,31 +7,15 @@
     tools:context=".QuizResultFragment">
 
     <TextView
-        android:id="@+id/fragment_quiz_result_title_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="@string/fragment_quiz_result_title_textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/title_textView"/>
-
-    <TextView
         android:id="@+id/fragment_quiz_result_totalQuestions_textView"
+        style="@style/field_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
         android:text="@string/fragment_quiz_result_totalQuestions_textView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_quiz_result_title_textView"
-        style="@style/field_textView"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/fragment_quiz_result_totalAnswered_textView"

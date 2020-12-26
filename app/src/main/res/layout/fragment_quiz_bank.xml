@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuizBankFragment">
+    tools:context=".fragments.QuizBankFragment">
 
     <Button
         android:id="@+id/fragment_quiz_bank_continue_button"

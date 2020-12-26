@@ -1,4 +1,4 @@
-package com.example.quizmaster
+package com.example.quizmaster.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,22 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.quizmaster.databinding.FragmentQuizBankBinding
-import com.example.quizmaster.databinding.FragmentViewQuizBinding
+import com.example.quizmaster.R
+import com.example.quizmaster.databinding.FragmentTakeQuizBinding
 
-class ViewQuizFragment : Fragment() {
-    private var _binding: FragmentViewQuizBinding? = null
+
+class TakeQuizFragment : Fragment() {
+    private var _binding: FragmentTakeQuizBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentViewQuizBinding.inflate(inflater, container, false)
+        _binding = FragmentTakeQuizBinding.inflate(inflater, container, false)
 
-        binding.fragmentViewQuizTakeQuizButton.setOnClickListener {
+        binding.fragmentTakeQuizSubmitButton.setOnClickListener {
             findNavController().navigate(
-                    R.id.action_viewQuizFragment_to_takeQuizFragment
+                    R.id.action_takeQuizFragment_to_quizResultFragment
             )
         }
 

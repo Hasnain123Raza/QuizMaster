@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TakeQuizFragment" >
+    tools:context=".fragments.TakeQuizFragment" >
 
     <Button
         android:id="@+id/fragment_take_quiz_previous_button"

@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.quizmaster.R
+import com.example.quizmaster.adapters.QuizBankRecyclerViewAdapter
 import com.example.quizmaster.databinding.FragmentQuizBankBinding
 
 class QuizBankFragment : Fragment() {
@@ -24,6 +26,15 @@ class QuizBankFragment : Fragment() {
                 R.id.action_profileFragment_to_viewQuizFragment
             )
         }
+
+        val recyclerView = binding.fragmentQuizBankRecyclerView
+
+        recyclerView.adapter = QuizBankRecyclerViewAdapter(10)
+        recyclerView.layoutManager = LinearLayoutManager(
+                activity,
+                LinearLayoutManager.VERTICAL,
+                false
+        )
 
         return binding.root
     }
